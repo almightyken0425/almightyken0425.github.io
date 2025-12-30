@@ -1,112 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Ken Chio's CV</title>
-</head>
-<body>
-<table cellspacing="20">
-    <tr>
-        <td>
-            <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E6%8D%8D%E8%A1%9B%E4%BB%BB%E5%8B%99-%E9%A7%AD%
-E5%AE%A2%E4%BB%BB%E5%8B%99-%E9%BB%91%E8%B1%B9-%E5%8D%A1%E8%B9%A6%E5%85%AC%E7%88%B5-%E5%9F%BA%E5%A5%B4%E6%9D%8E%E7%B6%AD
--%E6%AE%BA%E7%A5%9E-%E9%BA%A5%E5%8F%AFb%E5%96%AC%E4%B8%B9-1561457496.jpg?crop=0.490xw:0.783xh;0,0.0209xh&resize=640:*"
-     alt="almightyken's personal photo"
-     width="200"
-     height="200">
-        </td>
-        <td>
-            <h1>Ken Chio</h1>
-            <p>Im such a <strong>total</strong> <em>trash</em>.</p>
-            <a href="https://www.cakeresume.com/almightyken0425">cake resume link</a>
-            <a href="2nd_page.html">Link to 2nd page</a>
-            <p>Here is another paragraph</p>
-        </td>
-    </tr>
-</table>
-<h3>
-    Work Experience
-</h3>
-<table>
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Company</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>2021-Now</td>
-            <td>Funpodium</td>
-        </tr>
-    </tbody>
-    <tfoot>
+# Ken Chio - Portfolio Website
 
-    </tfoot>
-</table>
-<hr>
-<h3>Skills</h3>
-<table border="1">
-    <tr>
-        <td>
-            <table>
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>iOS Development</td>
-                        <td>★★</td>
-                    </tr>
-                    <tr>
-                        <td>Web Development</td>
-                        <td>★★</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>★★★★★</td>
-                    </tr>
-                </tbody>
-                <tfoot>
+Personal portfolio website showcasing product management expertise, projects, and knowledge base.
 
-                </tfoot>
-            </table>
-        </td>
-        <td>
-            <table>
-                <thead>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Curly Thumb</td>
-                        <td>★★★★★★</td>
-                    </tr>
-                    <tr>
-                        <td>Web Development</td>
-                        <td>★★</td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>★★★★★</td>
-                    </tr>
-                </tbody>
-                <tfoot>
+🔗 **Live Site:** [https://almightyken0425.github.io](https://almightyken0425.github.io)
 
-                </tfoot>
-            </table>
-        </td>
-    </tr>
-</table>
-<hr>
-<h3>Work Experience</h3>
-<ul>
-    <li>Funpodium
-        <ol>
-            <li>Product Manager</li>
-        </ol>
-    </li>
-    <li>Cloud Ware</li>
-    <li>Beseye</li>
-</ul>
-<hr>
-</body>
-</html>
+## About
+
+This website serves as a professional portfolio for Ken Chio, Product Team Leader with 8+ years of experience in iGaming and SaaS platforms.
+
+## Features
+
+- **Projects Showcase**: Detailed presentation of SuSuGiGi (personal finance app) with complete product specifications
+- **Knowledge Base**: Technical documentation and learning resources
+- **Work Experience**: Professional timeline with key achievements
+- **Contact Information**: Multiple ways to connect
+
+## Key Projects
+
+### SuSuGiGi - Personal Finance App
+- **Specifications**: [SuSuGiGiSpec Repository](https://github.com/almightyken0425/SuSuGiGiSpec)
+- **App**: [SuSuGiGiApp Repository](https://github.com/almightyken0425/SuSuGiGiApp)
+- 59+ markdown specification documents covering product definition, equity model, module specs, and development management
+
+### Knowledge Vault
+- **Repository**: [KnowledgeVault](https://github.com/almightyken0425/KnowledgeVault)
+- Technical learning documentation on Git, Server Knowledge, React, and more
+- 23+ markdown documents
+
+## Tech Stack
+
+- HTML5
+- CSS3 (Responsive Design)
+- Vanilla JavaScript
+- GitHub Pages for hosting
+
+## Design Philosophy
+
+Clean, professional, and content-focused design that emphasizes:
+- Product thinking and documentation capabilities
+- Clear information architecture
+- Readability and accessibility
+- No unnecessary animations or effects
+
+## Local Development
+
+Simply open `index.html` in a web browser to preview locally.
+
+## Deployment
+
+Automatically deployed via GitHub Pages when changes are pushed to the `main` branch.
+
+## Contact
+
+- **Email**: almightyken0425@gmail.com
+- **GitHub**: [@almightyken0425](https://github.com/almightyken0425)
+- **LinkedIn**: [Ken Chiu](https://www.linkedin.com/in/ken-chiu-35828557)
+
+---
+
+*Making everything makes sense.*
