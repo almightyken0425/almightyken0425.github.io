@@ -268,6 +268,64 @@ body {
     color: #004085;
 }
 
+/* App Preview Card */
+.app-preview-card {
+    background: #f8f9fa;
+    border: 2px solid #6c757d;
+}
+
+.app-preview-warning {
+    background: #fff3cd;
+    border-left: 4px solid #ff6b6b;
+    padding: 15px 20px;
+    margin: 20px 0;
+}
+
+.app-preview-warning strong {
+    display: block;
+    color: #d63031;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.app-preview-warning p {
+    color: #856404;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.app-preview-steps {
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.app-preview-steps h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.app-preview-steps ol {
+    margin-left: 20px;
+    color: #555;
+}
+
+.app-preview-steps li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.app-preview-steps a {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.app-preview-steps a:hover {
+    color: #2980b9;
+}
+
 /* Project Links */
 .project-links {
     margin-top: 20px;
