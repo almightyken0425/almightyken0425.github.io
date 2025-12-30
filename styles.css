@@ -407,7 +407,7 @@ body {
 .timeline::before {
     content: '';
     position: absolute;
-    left: 140px;
+    left: 170px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -416,8 +416,8 @@ body {
 
 .timeline-item {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 30px;
+    grid-template-columns: 170px 1fr;
+    gap: 40px;
     margin-bottom: 40px;
     position: relative;
 }
@@ -428,6 +428,7 @@ body {
     color: #7f8c8d;
     padding-top: 5px;
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .timeline-content {
@@ -437,7 +438,7 @@ body {
 .timeline-content::before {
     content: '';
     position: absolute;
-    left: 134px;
+    left: 164px;
     top: 10px;
     width: 14px;
     height: 14px;
@@ -570,20 +571,26 @@ body {
     }
 
     .timeline::before {
-        left: 80px;
+        left: 0;
     }
 
     .timeline-item {
-        grid-template-columns: 80px 1fr;
-        gap: 20px;
-    }
-
-    .timeline-content::before {
-        left: 74px;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .timeline-date {
-        font-size: 0.85rem;
+        text-align: left;
+        padding-left: 25px;
+        margin-bottom: 0;
+    }
+
+    .timeline-content {
+        padding-left: 25px;
+    }
+
+    .timeline-content::before {
+        left: -6px;
     }
 
     .contact-grid {
