@@ -249,6 +249,25 @@ body {
     color: #2c3e50;
 }
 
+/* App Preview Note */
+.app-preview-note {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    font-size: 0.9rem;
+    color: #856404;
+}
+
+.app-preview-note a {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.app-preview-note a:hover {
+    color: #004085;
+}
+
 /* Project Links */
 .project-links {
     margin-top: 20px;
