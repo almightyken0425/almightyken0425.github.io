@@ -47,25 +47,28 @@ body {
 
 .header-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .header .subtitle {
     font-size: 1.2rem;
     color: #ecf0f1;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .header-contact {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .contact-link {
@@ -514,7 +517,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -591,7 +594,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .container {
         padding: 0 15px;
     }
