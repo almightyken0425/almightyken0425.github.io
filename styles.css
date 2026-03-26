@@ -606,4 +606,91 @@ body {
     .project-card {
         padding: 20px;
     }
+
+    .spec-category {
+        padding: 15px;
+    }
+}
+
+/* ===================== */
+/* Print / PDF Export    */
+/* ===================== */
+@media print {
+    /* 隱藏導覽列、按鈕、footer */
+    .nav,
+    .project-links,
+    .btn,
+    .footer {
+        display: none !important;
+    }
+
+    /* 重置背景與字色，確保黑白列印清晰 */
+    body {
+        font-size: 11pt;
+        color: #000;
+        background: #fff;
+    }
+
+    /* 移除 header 背景色，改用文字顏色 */
+    .header {
+        background: #fff;
+        color: #000;
+        padding: 20px 0;
+        border-bottom: 2px solid #2c3e50;
+    }
+
+    .header h1,
+    .header .subtitle,
+    .contact-link {
+        color: #000;
+    }
+
+    /* 導覽列隱藏後調整 sticky 佔位 */
+    .main {
+        min-height: auto;
+    }
+
+    /* Section 縮減間距 */
+    .section {
+        padding: 20px 0;
+        page-break-inside: avoid;
+    }
+
+    /* 每個 project card 避免跨頁斷行 */
+    .project-card,
+    .timeline-item,
+    .knowledge-card {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+
+    /* 移除 section-alt 的灰底（列印時不必要） */
+    .section-alt {
+        background: #fff;
+    }
+
+    /* Grid 在列印時改為單欄 */
+    .spec-categories,
+    .knowledge-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 連結顯示實際 URL */
+    a[href]::after {
+        content: ' (' attr(href) ')';
+        font-size: 0.8em;
+        color: #555;
+    }
+
+    /* header 連結不顯示 URL（已是文字） */
+    .header a[href]::after {
+        content: none;
+    }
+
+    /* 確保容器寬度滿版 */
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
 }
