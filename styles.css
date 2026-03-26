@@ -607,7 +607,7 @@ body {
         padding: 20px;
     }
 
-    .spec-category {
+    .skills-category {
         padding: 15px;
     }
 }
@@ -670,7 +670,7 @@ body {
     }
 
     /* Grid 在列印時改為單欄 */
-    .spec-categories,
+    .skills-grid,
     .knowledge-grid,
     .contact-grid {
         grid-template-columns: 1fr;
