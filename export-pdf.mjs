@@ -21,14 +21,10 @@ const outPath  = path.resolve(__dirname, 'ken_chio_resume.pdf');
   // 讓 Google Fonts 有時間套用（本機字體可能需要）
   await new Promise(r => setTimeout(r, 1500));
 
-  // 隱藏導覽列（print CSS 已做，這裡雙重保險）
+  // 雙重保險：印刷色彩 + 基準字級；版面細節交給 styles.css 的 @media print
   await page.addStyleTag({ content: `
-    .nav, .footer, .project-links, .btn { display: none !important; }
     html { font-size: 14px !important; }
     body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .header h1 { font-size: 3rem !important; }
-    .section { padding: 28px 0 !important; }
-    .main { min-height: auto !important; }
   `});
 
   console.log('🖨️  輸出 PDF...');

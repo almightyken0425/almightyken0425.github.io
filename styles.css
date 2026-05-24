@@ -616,79 +616,133 @@ body {
 /* Print / PDF Export    */
 /* ===================== */
 @media print {
-    /* 隱藏導覽列、按鈕、footer */
     .nav,
-    .project-links,
-    .btn,
     .footer {
         display: none !important;
     }
 
-    /* 重置背景與字色，確保黑白列印清晰 */
+    /* 保留 .project-links 與 .btn 讓 GitHub 連結可在 PDF 中點擊 */
+    .project-links {
+        margin-top: 8px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline;
+        padding: 0;
+        background: transparent !important;
+        color: #1e3a8a !important;
+        font-weight: 500;
+        font-size: 0.78rem;
+        box-shadow: none !important;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
     body {
-        font-size: 11pt;
+        font-size: 10.5pt;
         color: #000;
         background: #fff;
     }
 
-    /* 移除 header 背景色，改用文字顏色 */
     .header {
         background: #fff;
         color: #000;
-        padding: 20px 0;
-        border-bottom: 2px solid #2c3e50;
+        padding: 12px 0 14px;
+        border-bottom: 2px solid #111;
     }
 
-    .header h1,
-    .header .subtitle,
-    .contact-link {
-        color: #000;
+    .header h1 {
+        font-size: 3rem;
+        line-height: 0.92;
     }
 
-    /* 導覽列隱藏後調整 sticky 佔位 */
+    .summary {
+        margin-top: 10px;
+    }
+
+    .banner-photo-wrap {
+        width: 120px;
+    }
+
     .main {
         min-height: auto;
     }
 
-    /* Section 縮減間距 */
+    /* 區段保留 page-break-inside auto，避免大段空白 */
     .section {
-        padding: 20px 0;
-        page-break-inside: avoid;
+        padding: 14px 0;
+        page-break-inside: auto;
     }
 
-    /* 每個 project card 避免跨頁斷行 */
+    .section h2,
+    .edu-block h2 {
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+
+    /* 卡片與 timeline item 仍避免跨頁斷行 */
     .project-card,
     .timeline-item,
-    .knowledge-card {
+    .knowledge-card,
+    .skills-category,
+    .edu-item {
         page-break-inside: avoid;
-        border: 1px solid #ccc;
     }
 
-    /* 移除 section-alt 的灰底（列印時不必要） */
+    .project-card {
+        padding: 14px 18px;
+        margin-bottom: 10px;
+        border: 1px solid #e5e5e5;
+        box-shadow: none;
+    }
+
+    .knowledge-card {
+        padding: 12px 16px;
+        border: 1px solid #e5e5e5;
+        box-shadow: none;
+    }
+
+    .skills-category {
+        padding: 10px 14px;
+        border: 1px solid #e5e5e5;
+        box-shadow: none;
+    }
+
+    .timeline-item {
+        margin-bottom: 16px;
+    }
+
+    .timeline-content h3 {
+        margin-bottom: 6px;
+    }
+
+    .timeline-content li {
+        margin-bottom: 3px;
+        line-height: 1.45;
+    }
+
     .section-alt {
         background: #fff;
     }
 
-    /* Grid 在列印時改為單欄 */
-    .skills-grid,
-    .knowledge-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
+    /* 維持原本的多欄 grid，避免縱向拉長 */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
-    /* 連結顯示實際 URL */
-    a[href]::after {
-        content: ' (' attr(href) ')';
-        font-size: 0.8em;
-        color: #555;
+    .knowledge-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 14px;
     }
 
-    /* header 連結不顯示 URL（已是文字） */
-    .header a[href]::after {
-        content: none;
+    .edu-cert-grid {
+        gap: 30px;
     }
 
-    /* 確保容器寬度滿版 */
     .container {
         max-width: 100%;
         padding: 0 10px;
