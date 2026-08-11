@@ -34,3 +34,36 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Screenshot lightbox
+const lightbox = document.getElementById('lightbox');
+
+if (lightbox) {
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    const openLightbox = (src, alt) => {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('is-open');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll('.app-gallery img').forEach(img => {
+        img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+}
