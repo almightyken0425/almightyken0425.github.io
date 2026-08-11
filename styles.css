@@ -434,8 +434,30 @@ body {
 .project-links {
     margin-top: 18px;
     display: flex;
-    gap: 12px;
+    justify-content: space-evenly;
+    row-gap: 12px;
     flex-wrap: wrap;
+}
+
+.app-gallery {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 16px;
+}
+
+.app-gallery img {
+    height: 300px;
+    width: auto;
+    border-radius: 18px;
+    border: 1px solid #ececec;
+    box-shadow: 0 4px 16px rgba(17, 17, 17, 0.08);
+    cursor: zoom-in;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.app-gallery img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(30, 58, 138, 0.18);
 }
 
 /* ─────────────────────────────────────
@@ -459,6 +481,61 @@ body {
     background: #1e40af;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(30, 58, 138, 0.32);
+}
+
+.btn-appstore {
+    background: #111;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+.btn-appstore:hover {
+    background: #000;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+}
+
+/* ─────────────────────────────────────
+   Screenshot Lightbox
+───────────────────────────────────── */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 12, 0.88);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.lightbox.is-open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 88vh;
+    border-radius: 22px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.24);
 }
 
 /* ─────────────────────────────────────
@@ -607,6 +684,10 @@ body {
         padding: 20px;
     }
 
+    .app-gallery img {
+        height: 220px;
+    }
+
     .skills-category {
         padding: 15px;
     }
@@ -621,11 +702,25 @@ body {
         display: none !important;
     }
 
-    /* 保留 .project-links 與 .btn 讓 GitHub 連結可在 PDF 中點擊 */
+    /* 保留 .project-links 與 .btn 讓 GitHub 連結可在 PDF 中點擊；lightbox 是互動用途，列印時不需要 */
     .project-links {
         margin-top: 8px;
-        gap: 12px;
+        row-gap: 8px;
         flex-wrap: wrap;
+    }
+
+    .lightbox {
+        display: none !important;
+    }
+
+    .app-gallery {
+        margin-top: 8px;
+    }
+
+    .app-gallery img {
+        height: 130px;
+        box-shadow: none;
+        cursor: default;
     }
 
     .btn {
